@@ -28,7 +28,7 @@ test('default state validation', async ({ page }) => {
     await expect(page.getByTestId('payment-paypal-radio')).toBeChecked({checked: false});
 });
 
-test.only('shows error on invalid input on each field', async ({ page }) => {
+test('shows error on invalid input on each field', async ({ page }) => {
     await page.goto('https://shop.tl-academy.ee/checkout');
 
     await page.getByTestId('email-input').fill('sreela');
